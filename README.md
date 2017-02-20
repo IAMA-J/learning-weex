@@ -10,7 +10,7 @@ npm install -g weex-toolkit@beta
 安装好后,查看weex的指令：weex 
 二：创建应用  
 ======================================
-(1)首先在新建一个文件夹，如Demo   
+(1)首先在新建一个文件夹，如Demo 
 (2)用cmd,切换到Demo文件夹目录下 
 (3)初始化项目：weex init，初始化之后可以看到文件夹多了许多文件 
 (4)安装依赖：npm install
