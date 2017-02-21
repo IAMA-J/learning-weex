@@ -18,3 +18,5 @@ npm install -g weex-toolkit@beta
 启动静态服务器：npm run serve
 (6)启动完之后，在浏览器打开：http://localhost:8080/index.html  
 8080为默认接口，如果要改在可以在项目目录下的package.json文件修改。
+(7)
+
