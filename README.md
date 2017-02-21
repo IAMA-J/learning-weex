@@ -14,3 +14,5 @@ npm install -g weex-toolkit@beta
 (2)用cmd,切换到Demo文件夹目录下 
 (3)初始化项目：weex init，初始化之后可以看到文件夹多了许多文件 
 (4)安装依赖：npm install
+(5)运行：npm run dev 
+启动静态服务器：npm run serve
