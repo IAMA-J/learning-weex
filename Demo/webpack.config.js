@@ -18,10 +18,11 @@ var bannerPlugin = new webpack.BannerPlugin(
 
 function getBaseConfig () {
   return {
-    entry: {
+    entry: {/*入口文件*/
       app: path.resolve('./app.js')
+
     },
-    output: {
+    output: {/*输出文件*/
       path: 'dist',
     },
     module: {
