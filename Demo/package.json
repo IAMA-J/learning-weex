@@ -11,6 +11,9 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
+    "copy:android": "cp dist/index.weex.js android/app/src/main/assets/index.js",
+    "copy:ios": "cp dist/index.weex.js ios/assets/index.js",
+    "copy": "npm run copy:android && npm run copy:ios",
     "serve": "node build/init.js && serve -p 8080",
     "debug": "weex-devtool"
   },
