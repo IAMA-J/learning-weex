@@ -5,7 +5,8 @@ import ArticleView from './views/ArticleView.vue'
 import CommentView from './views/CommentView.vue'
 import UserView from './views/UserView.vue'*/
 import HomeView from './views/HomeView.vue'
-import SearchView from './views/SearchView.vue'
+import AboutView from './views/AboutView.vue'
+import ThemesView from './views/ThemesView.vue'
 
 Vue.use(Router)
 
@@ -31,8 +32,9 @@ export default new Router({
     { path: '/item/:id(\\d+)', component: CommentView },
     { path: '/user/:id', component: UserView },*/
 
-    { path: '/home', component: HomeView },
-    { path: '/search', component: SearchView },
-    { path: '/', redirect: '/home' }
+        { path: '/home', component: HomeView },
+        { path: '/themes', component: ThemesView },
+        {path: '/about', component: AboutView },
+        { path: '/', redirect: '/home' }
   ]
 })
