@@ -6,7 +6,7 @@
         <div class="toutiao">
           <text style="font-size: 50px;color: #FFFFFF;">今日头条</text>
         </div>
-        <div class="search">
+        <div class="search" @click="jump('/search')">
           <image style="width:64px;height:50px;" resize="contain" src="http://s3.pstatp.com/growth/mobile_list/image/feed_ic_search_normal@3x_0f198e566fac66cbb016bc72f15d4f39.png" ></image>
 
         </div>
