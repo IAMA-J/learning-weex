@@ -1,52 +1,30 @@
 <template>
-  <!--  <list class="list" >
-        <cell class="cell" >
-            <div class="header">
-                <text>11111111</text>
-            </div>
-           &lt;!&ndash; <div class="cell">
+    <list class="list" @loadmore="fetch" loadmoreoffset="10">
+        <cell class="cell" v-for="val in lists">
+            <div class="list-item" @click="newsDetails" :id="val.id">
                 <div class="title"><text>{{val.title}}</text></div>
                 <div class="img" title="val.id"> <image class="title-bg" resize="cover" :src="val.images[0]"></image></div>
-            </div>&ndash;&gt;
-
-
+            </div>
         </cell>
-    </list>-->
 
-        <list class="list" @loadmore="fetch" loadmoreoffset="0">
-            <cell class="cell" v-for="val in lists">
-                <div class="list-item" >
-                    <div class="title"><text>{{val.title}}</text></div>
-                    <div class="img" title="val.id"> <image class="title-bg" resize="cover" :src="val.images[0]"></image></div>
-                </div>
-            </cell>
-        </list>
+    </list>
+
 
 </template>
 
 <style scoped>
     .list{
         background-color: #ececec;
-        flex-direction: column;
-    }
-    .header{
-        flex:1;
-        height:84px;
-        justify-content: center;
-        align-items: center;
-        padding-top:6px;
-        padding-bottom: 6px;
+
     }
     .cell{
-        flex:1;
-        flex-direction: row;
-        height:200px;
+        /*
+        cell标签不能使用flex,会导致安卓出现高度压缩的，所以想让每一行有高度，则给cell下面的div定高度。
+        */
     }
     .list-item{
-        flex:1;
+        height:200px;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
         padding-top:12px;
         padding-bottom: 12px;
         background-color: #FFFFFF;
@@ -57,9 +35,13 @@
     }
     .title{
         flex:4;
+        justify-content: center;
     }
     .img{
         flex:1;
+        height:200px;
+        justify-content: center;
+        align-items: center;
     }
     .title-bg{
         height:150px;
@@ -74,15 +56,26 @@
             return {
                 lists: [],
                 arrMsg:[],
-                beforeTime:'2017'
+                beforeTime:'2017',
+                num:0,
             }
         },
         methods: {
             fetch (event) {
-                modal.toast({ message:this.beforeTime.slice(4), duration: 1 })
-                setTimeout(() => {
-                    this.beforeTime=this.beforeTime
-                }, 800)
+                if(this.num<=1){
+                    return stream.fetch({
+                        method: 'GET',
+                        type: 'json',
+                        url: 'http://news-at.zhihu.com/api/4/news/before/20170301'
+                    }, res => {
+                        let beforeData=res.data.stories;
+                        setTimeout(() => {
+                            for(let i=0;i<beforeData.length;i++){
+                                this.lists.push(beforeData[i]);
+                            }
+                        }, 800)
+                    })
+                }
             },
             getData:function(callback){
                 return stream.fetch({
@@ -91,14 +84,15 @@
                     url: 'http://news-at.zhihu.com/api/4/news/latest'
                 },callback)
             }
-        },created () {
+        },
+        created () {
             this.getData( res => {
                 let data=res.data
                 let currentTime=data.date
                 this.beforeTime=res.ok ? currentTime : '(network error)';
                 this.lists = res.ok ? data.stories : '(network error)';
-            })
 
+            })
         }
     }
 </script>

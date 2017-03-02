@@ -7,6 +7,7 @@ import UserView from './views/UserView.vue'*/
 import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import ThemesView from './views/ThemesView.vue'
+import NewsView from './views/NewsView.vue'
 
 Vue.use(Router)
 
@@ -35,6 +36,7 @@ export default new Router({
         { path: '/home', component: HomeView },
         { path: '/themes', component: ThemesView },
         {path: '/about', component: AboutView },
-        { path: '/', redirect: '/home' }
+        {path: '/news/', component: NewsView },
+        { path: '/', redirect: '/news' }
   ]
 })

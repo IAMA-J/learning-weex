@@ -7,12 +7,11 @@
 </template>
 
 <style scoped>
-  .header{
-    height:74px;
-    background-color: #252e39;
-    flex-direction: row;
-  }
-
+    .header{
+        height:120px;
+        background-color: #252e39;
+        flex-direction: row;
+    }
     .tab{
         flex: 1;
         justify-content:center;

@@ -1,15 +1,6 @@
 <template>
   <div class="wrapper">
-    <!--<div class="header">
-        <text>{{timer}}</text>
-    </div>
-    <div class="list-item" v-for="val in arrMsg">
-      <div class="title"><text>{{val.title}}</text></div>
-      <div class="img" title="val.id"> <image class="title-bg" resize="cover" :src="val.images[0]"></image></div>
-    </div>-->
     <newList></newList>
-
-
   </div>
 </template>
 
