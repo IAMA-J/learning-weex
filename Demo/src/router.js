@@ -36,7 +36,7 @@ export default new Router({
         { path: '/home', component: HomeView },
         { path: '/themes', component: ThemesView },
         {path: '/about', component: AboutView },
-        {path: '/news/', component: NewsView },
-        { path: '/', redirect: '/news' }
+        {path: '/news/:id', component: NewsView },
+        { path: '/', redirect: '/home' }
   ]
 })

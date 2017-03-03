@@ -7,9 +7,9 @@ export default {
         this.$router.push(to)
       }
     },
-     newsDetails(event){
-         modal.toast({ message: 'loadmore'+this.attr('id'), duration:10 })
-         this.$router.push('/news/1111')
+     newsDetails(toUrl){
+
+         this.$router.push('/news'+'/'+toUrl)
      }
   }
 }

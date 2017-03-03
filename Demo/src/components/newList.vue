@@ -1,7 +1,7 @@
 <template>
     <list class="list" @loadmore="fetch" loadmoreoffset="10">
         <cell class="cell" v-for="val in lists">
-            <div class="list-item" @click="newsDetails" :id="val.id">
+            <div class="list-item" @click="newsDetails(val.id)">
                 <div class="title"><text>{{val.title}}</text></div>
                 <div class="img" title="val.id"> <image class="title-bg" resize="cover" :src="val.images[0]"></image></div>
             </div>
@@ -49,6 +49,7 @@
     }
 </style>
 <script>
+
     const modal = weex.requireModule('modal');
     const stream = weex.requireModule('stream');
     export default {
@@ -62,6 +63,7 @@
         },
         methods: {
             fetch (event) {
+                this.num++;
                 if(this.num<=1){
                     return stream.fetch({
                         method: 'GET',

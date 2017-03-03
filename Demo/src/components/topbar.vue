@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-      <div class="tab"><text @click="jump('/home')"  style="color:#ffffff;font-size:30px;">首页</text></div>
-      <div class="tab"><text @click="jump('/themes')" style="color:#ffffff;font-size:30px;">主题日报</text></div>
-      <div class="tab"><text @click="jump('/about')" style="color:#ffffff;font-size:30px;">关于</text></div>
+      <div class="tab" @click="jump('/home')"><text   style="color:#ffffff;font-size:30px;">首页</text></div>
+      <div class="tab" @click="jump('/themes')"><text  style="color:#ffffff;font-size:30px;">主题日报</text></div>
+      <div class="tab" @click="jump('/about')"><text  style="color:#ffffff;font-size:30px;">关于</text></div>
   </div>
 </template>
 
