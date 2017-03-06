@@ -41,4 +41,4 @@ npm run debug
 You can config more babel, ESLint and PostCSS plugins in `webpack.config.js`.
 
 ## result
- ![image](https://github.com/IAMA-J/learning-weex/edit/master/Demo/src/img/a.png)
+ ![image](https://github.com/IAMA-J/learning-weex/edit/master/Demo/src/a.png)
