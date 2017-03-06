@@ -8,8 +8,13 @@ export default {
       }
     },
      newsDetails(toUrl){
-
          this.$router.push('/news'+'/'+toUrl)
-     }
+     },
+      themeView(themeId){
+         this.$router.push('/theme'+'/'+themeId)
+      },
+      tnewsDetails(toUrl){
+          this.$router.push('/tnews'+'/'+toUrl)
+      },
   }
 }

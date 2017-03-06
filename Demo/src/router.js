@@ -1,13 +1,12 @@
 // import Vue from 'vue'
 import Router from 'vue-router'
-/*import StoriesView from './views/StoriesView.vue'
-import ArticleView from './views/ArticleView.vue'
-import CommentView from './views/CommentView.vue'
-import UserView from './views/UserView.vue'*/
+
 import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import ThemesView from './views/ThemesView.vue'
 import NewsView from './views/NewsView.vue'
+import ThemeDetail from './views/ThemeDetail.vue'
+import TnewsView from './views/TnewsView.vue'
 
 Vue.use(Router)
 
@@ -37,6 +36,8 @@ export default new Router({
         { path: '/themes', component: ThemesView },
         {path: '/about', component: AboutView },
         {path: '/news/:id', component: NewsView },
+        {path: '/theme/:id', component: ThemeDetail },
+        {path: '/tnews/:id', component: TnewsView },
         { path: '/', redirect: '/home' }
   ]
 })

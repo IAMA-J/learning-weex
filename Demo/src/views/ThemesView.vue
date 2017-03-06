@@ -1,84 +1,7 @@
 <template>
- <list>
-   <cell>
-     <div style="height:300px">
-       <div><text>111</text></div>
-     </div>
-   </cell>
-   <cell>
-     <div style="height:300px">
-       <div><text>111</text></div>
-     </div>
-   </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell><cell>
-   <div style="height:300px">
-     <div><text>111</text></div>
-   </div>
- </cell>
- </list>
+    <div class="wrapper">
+        <themesList></themesList>
+    </div>
 </template>
 
 <style scoped>
@@ -86,7 +9,8 @@
 </style>
 
 <script>
+    import themesList from  './../components/themesList.vue'
   export default {
-
+        components:{themesList}
   }
 </script>

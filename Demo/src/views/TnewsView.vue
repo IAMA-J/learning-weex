@@ -8,6 +8,7 @@
     <div class="body">
       <text>{{msg}}</text>
     </div>
+
   </scroller>
 </template>
 
@@ -57,7 +58,7 @@
             this.getData( res => {
                 let data=res.data
                 this.msg=res.ok ? res : '(network error)';
-                this.imgUrl=res.ok ? data.image : '(network error)';
+                this.imgUrl=res.ok ? data.theme.thumbnail : '(network error)';
                 this.title=res.ok ? data.title: '(network error)';
 
             })
