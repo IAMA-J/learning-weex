@@ -15,7 +15,7 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
-// register global mixins.
+// register global mixins.设置全局
 Vue.mixin(mixins)
 
 // create the app instance.
