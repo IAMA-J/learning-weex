@@ -11,7 +11,7 @@ npm install
 ## file structure
 
 * `src/*`: all source code
-* `app.js`: entrance of the Weex page
+* `entry.js`: entrance of the Weex page
 * `build/*`: some build scripts
 * `dist/*`: where places generated code
 * `assets/*`: some assets for Web preview
