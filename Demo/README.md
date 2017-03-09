@@ -32,7 +32,7 @@ npm install
 # build the two js bundles and watch file changes
 npm run dev
 
-# start a Web server at 8080 port
+# start a Web server at 8081 port
 npm run serve
 
 # start weex-devtool for debugging with native
