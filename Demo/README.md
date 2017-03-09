@@ -26,6 +26,9 @@ npm install
 # build both two js bundles for Weex and Web
 npm run build
 
+#
+npm install
+
 # build the two js bundles and watch file changes
 npm run dev
 
